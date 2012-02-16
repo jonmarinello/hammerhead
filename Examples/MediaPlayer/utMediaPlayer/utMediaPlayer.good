@@ -1,0 +1,183 @@
+###############################################################################
+###############################################################################
+###############################################################################
+#
+#   CMediaPlayer Unit Test
+#
+###############################################################################
+###############################################################################
+###############################################################################
+
+
+
+
+###############################################################################
+###############################################################################
+#
+#   Test "go right" legs
+#
+###############################################################################
+###############################################################################
+
+###############################################################################
+#
+#   Test the constructor
+#
+###############################################################################
+create
+SC_SoundCard::SC_SoundCard() called.
+
+###############################################################################
+#
+#   Test the destructor and the constructor again
+#
+#   Because we store a std::auto_ptr< MP_MediaPlayer >, when we create a new
+#   MediaPlayer, the previous instance is destroyed prior to the assignment
+#   of the new object.
+#
+###############################################################################
+create
+SC_SoundCard::SC_SoundCard() called.
+~SC_SoundCard() called.
+
+###############################################################################
+#
+#   Test the Play method
+#
+###############################################################################
+play c:\foobar.wav
+SC_SoundCard::Play() called with "c:\foobar.wav".
+
+
+###############################################################################
+#
+#   Test the Record method
+#
+###############################################################################
+record
+SC_SoundCard::Record() called.
+
+
+###############################################################################
+#
+#   Test the Stop method
+#
+###############################################################################
+stop
+SC_SoundCard::Stop() called.
+
+
+###############################################################################
+#
+#   Test the getNumHarwareDevices static method
+#
+###############################################################################
+getNumHardwareDevices
+GetNumHardwareDevices() returned 0
+setNumHardwareDevices 3
+getNumHardwareDevices
+GetNumHardwareDevices() returned 3
+setNumHardwareDevices 100
+getNumHardwareDevices
+GetNumHardwareDevices() returned 100
+setNumHardwareDevices 55
+getNumHardwareDevices
+GetNumHardwareDevices() returned 55
+setNumHardwareDevices 2000
+getNumHardwareDevices
+GetNumHardwareDevices() returned 2000
+setNumHardwareDevices 69
+getNumHardwareDevices
+GetNumHardwareDevices() returned 69
+
+
+
+
+
+###############################################################################
+###############################################################################
+#
+#   Test error legs
+#
+###############################################################################
+###############################################################################
+
+###############################################################################
+#
+#   Test the Play method error legs and exercise all code paths
+#
+###############################################################################
+setExceptionToThrow SC_DeviceError
+play c:\foobar.wav
+SC_SoundCard::Play() called with "c:\foobar.wav".
+Device error on sound card.
+
+setExceptionToThrow SC_InvalidMedia
+play c:\foobar.wav
+SC_SoundCard::Play() called with "c:\foobar.wav".
+'c:\foobar.wav' in not in a recognized media format.
+SC_SoundCard::Play() called with "InvalidMediaMessage.wav".
+
+setExceptionToThrow SC_FileNotFound
+play c:\foobar.wav
+SC_SoundCard::Play() called with "c:\foobar.wav".
+Can't find 'c:\foobar.wav'.
+SC_SoundCard::Play() called with "FileNotFound.wav".
+
+setExceptionToThrow ""
+
+
+###############################################################################
+#
+#   Test the Record method error legs and exercise all code paths
+#
+###############################################################################
+setExceptionToThrow SC_DeviceError
+record
+SC_SoundCard::Record() called.
+Device error on sound card.
+
+
+###############################################################################
+#
+#   Test the Stop method error legs and exercise all code paths
+#
+###############################################################################
+setExceptionToThrow SC_DeviceError
+stop
+SC_SoundCard::Stop() called.
+Device error on sound card.
+
+
+###############################################################################
+#
+#   Show the ?? command in this example (in real unit tests you wouldn't have
+#   this in the input script)
+#
+###############################################################################
+??
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+            Documented Derived Commands
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+create - creates a new media player.
+
+play - calls Play( "<file name>" ).
+
+record - calls Record().
+
+stop - calls Stop().
+
+getNumHardwareDevices - calls GetNumHardwareDevices().
+
+setNumHardwareDevices <nextNumHarwareDevices> - controls the SoundCard::GetNumHardwareDevices() stub.
+
+setExceptionToThrow <exception name> - controls throwing exceptions in the SoundCard stub.
+    where <exception name> must be:
+        - ""
+        - SC_DeviceError
+        - SC_InvalidMedia
+        - SC_FileNotFound
+
+exit
+~SC_SoundCard() called.
