@@ -1,0 +1,219 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+#include "HhRuntime\version.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\HhGui.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\HhGui.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 343, 54
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Hammerhead C++ Unit Test Framework"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+    LTEXT           "<version>",IDC_VERSION,199,17,51,8,SS_NOPREFIX
+    LTEXT           "Copyright (c) 2003 Jon Marinello",IDC_STATIC,41,28,119,
+                    8
+    DEFPUSHBUTTON   "OK",IDOK,286,7,50,14,WS_GROUP
+    LTEXT           "Hammerhead C++ Unit Test Framework   Version:",
+                    IDC_STATIC,41,17,156,8
+END
+
+IDD_HHGUI_DIALOG DIALOGEX 0, 0, 384, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_CONTEXTHELP | WS_EX_APPWINDOW
+CAPTION "Hammerhead Unit Test Framework"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Config file:",IDC_STATIC,42,10,34,8
+    EDITTEXT        IDC_CONFIG_FILE,80,7,245,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,329,7,48,14
+    LTEXT           "Input script:",IDC_STATIC,38,28,38,8
+    EDITTEXT        IDC_INPUT_SCRIPT,80,25,161,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "&Edit",IDC_EDIT_IN_FILE,246,25,38,14
+    DEFPUSHBUTTON   "&Run",IDC_RUN_TEST,288,25,38,14
+    LTEXT           "Test result:",IDC_STATIC,41,46,36,8
+    EDITTEXT        IDC_RESULT,80,43,161,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&Failures",IDC_VIEW_FAILURES,246,42,38,14
+    PUSHBUTTON      "&Approve",IDC_APPROVE_TEST,288,42,38,14
+    LTEXT           "Last command status:",IDC_STATIC,7,63,70,8
+    EDITTEXT        IDC_STATE,80,61,161,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&Generate...",IDC_GENERATE_CONFIG_FILE,329,25,48,14
+    PUSHBUTTON      "&Help",ID_HELP,329,42,48,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION HH_VERSION_MAJOR_VERSION, HH_VERSION_MINOR_VERSION, HH_VERSION_POINT_VERSION, HH_VERSION_BUILD_NUMBER
+ PRODUCTVERSION HH_VERSION_MAJOR_VERSION, HH_VERSION_MINOR_VERSION, HH_VERSION_POINT_VERSION, HH_VERSION_BUILD_NUMBER
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", HH_VERSION_COMPANY_NAME
+            VALUE "FileDescription", "HammerHead C++ Unit Test Framework Application"
+            VALUE "FileVersion", HH_VERSION_AS_STRING
+            VALUE "InternalName", "HammerHead C++ Unit Test Framework Application"
+            VALUE "LegalCopyright", HH_VERSION_COPYRIGHT_NOTICE
+            VALUE "OriginalFilename", "HhGui.exe"
+            VALUE "ProductName", "HammerHead C++ Unit Test Framework Application"
+            VALUE "ProductVersion", HH_VERSION_AS_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 336
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_HHGUI_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 377
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "About Hammerhead C++ Unit Test Framework..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\HhGui.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

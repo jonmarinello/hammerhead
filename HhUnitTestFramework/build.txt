@@ -1,0 +1,11 @@
+[Build C++]
+"HhUnitTestFramework.sln" "Debug"
+"HhUnitTestFramework.sln" "Release"
+"HhUnitTestFramework.sln" "DebugMtDll"
+"HhUnitTestFramework.sln" "ReleaseMtDll"
+
+[Build Docs]
+"config.txt"
+
+[Tests]
+"utHhUnitTestFramework" "hh.cfg"

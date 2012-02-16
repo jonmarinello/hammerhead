@@ -1,0 +1,134 @@
+#
+# Hammerhead C++ Unit Test Framework -- unit test
+#
+
+#
+# test empty string
+# following line has four spaces and should be ignored
+    
+
+#
+# test built-in system command
+#
+system "dir /b *.cpp"
+system echo
+
+#
+# test built-in CreateProcess command
+#
+createProcess "cmd.exe /c dir /b *.cpp"
+createProcess "not_found.exe"
+
+#
+# test built-in sleep command
+#
+sleep 1000
+
+#
+# test C++ bool data type
+#
+GetBool
+
+SetBool false
+GetBool
+
+SetBool true
+GetBool
+
+#
+# test built-in VariableData commands
+#
+GetVariableData
+
+SetVariableData true
+GetVariableData
+
+SetVariableData false
+GetVariableData
+
+#
+# test derived GetStringValue command - should return "defaultStringValue"
+#
+GetStringValue
+
+#
+# test missing test command parameter - should give the "Missing parameter"
+#
+SetStringValue
+
+#
+# test derived GetDummy command again - should return "defaultStringValue"
+#
+GetStringValue
+
+#
+# test derived SetDummy command
+#
+SetStringValue foobar
+
+#
+# test derived GetDummy command again - should return "foobar"
+#
+GetStringValue
+
+#
+# test multiple paramaters
+#
+TestMultipleParams "Here is a string with multiple tokens" HereIsAStringWithOneToken true 69 99.99
+
+#
+# test ?
+#
+?
+
+#
+# test ??
+#
+??
+
+#
+# test multi-token string parsing errors
+#
+system "dir *.cpp
+system "dir *.cpp\x
+system
+
+
+#
+# test multi-token string more
+#
+Test2MultiTokenStrings "hello" "bye bye"
+Test2MultiTokenStrings hello "bye bye"
+Test2MultiTokenStrings hello bye bye
+Test2MultiTokenStrings "hello" "bye bye"
+
+Test2MultiTokenStrings "\"hello\"" "bye bye"
+
+Test2MultiTokenStrings \"
+Test2MultiTokenStrings "hello""bye bye"
+
+Test2MultiTokenStrings
+Test2MultiTokenStrings "hello"
+Test2MultiTokenStrings "" ""
+Test2MultiTokenStrings """"
+Test2MultiTokenStrings "\\" "\""
+
+
+#
+# include file at first recursion level
+#
+@include include1.in
+
+
+#
+# include file at first recursion level (second test to make sure we can include some of the same files again)
+#
+@include include5.in
+@include include5.in
+@include include5.in
+
+
+#
+# test exit command
+#
+exit

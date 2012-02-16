@@ -1,0 +1,27 @@
+#
+# Hammerhead C++ Unit Test Framework -- unit test (inlcude 3)
+#
+
+#
+# test C++ bool data type
+#
+GetBool
+
+SetBool false
+GetBool
+
+SetBool true
+GetBool
+
+
+#
+# include file (with spaces in the name ) at fourth recursion level.
+# also throw in some spaces after the include command and before the file name begins
+#
+@include                             include 4.in
+
+
+#
+# test C++ bool data type again after returning from include4.in (include3)
+#
+GetBool

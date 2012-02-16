@@ -1,0 +1,26 @@
+#
+# Hammerhead C++ Unit Test Framework -- unit test (inlcude 2)
+#
+
+#
+# test C++ bool data type
+#
+GetBool
+
+SetBool false
+GetBool
+
+SetBool true
+GetBool
+
+
+#
+# include file at third recursion level
+#
+@include include3.in
+
+
+#
+# test C++ bool data type again after returning from include3.in (include2)
+#
+GetBool

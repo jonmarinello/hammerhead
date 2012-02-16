@@ -1,0 +1,14 @@
+#
+# Hammerhead C++ Unit Test Framework -- unit test (inlcude 4)
+#
+
+#
+# test C++ bool data type
+#
+GetBool
+
+SetBool false
+GetBool
+
+SetBool true
+GetBool

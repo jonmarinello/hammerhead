@@ -1,0 +1,8 @@
+[Subsystems]
+"HhUnitTestFramework"
+
+[Build C++]
+"Hammerhead.sln" "Debug"
+"Hammerhead.sln" "Release"
+"Hammerhead.sln" "DebugMtDll"
+"Hammerhead.sln" "ReleaseMtDll"

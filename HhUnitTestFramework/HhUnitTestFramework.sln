@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HhUnitTestFramework", "HhUnitTestFramework.vcxproj", "{A74F38EB-7D21-4E03-94A7-26791D3A3146}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "utHhUnitTestFramework", "utHhUnitTestFramework\utHhUnitTestFramework.vcxproj", "{17F2560D-ADF9-46D4-9FE6-D2B058F5FB05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		DebugMtDll|Win32 = DebugMtDll|Win32
+		Release|Win32 = Release|Win32
+		ReleaseMtDll|Win32 = ReleaseMtDll|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.Debug|Win32.Build.0 = Debug|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.DebugMtDll|Win32.ActiveCfg = DebugMtDll|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.DebugMtDll|Win32.Build.0 = DebugMtDll|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.Release|Win32.ActiveCfg = Release|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.Release|Win32.Build.0 = Release|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.ReleaseMtDll|Win32.ActiveCfg = ReleaseMtDll|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.ReleaseMtDll|Win32.Build.0 = ReleaseMtDll|Win32
+		{17F2560D-ADF9-46D4-9FE6-D2B058F5FB05}.Debug|Win32.ActiveCfg = Debug|Win32
+		{17F2560D-ADF9-46D4-9FE6-D2B058F5FB05}.Debug|Win32.Build.0 = Debug|Win32
+		{17F2560D-ADF9-46D4-9FE6-D2B058F5FB05}.DebugMtDll|Win32.ActiveCfg = DebugMtDll|Win32
+		{17F2560D-ADF9-46D4-9FE6-D2B058F5FB05}.DebugMtDll|Win32.Build.0 = DebugMtDll|Win32
+		{17F2560D-ADF9-46D4-9FE6-D2B058F5FB05}.Release|Win32.ActiveCfg = Release|Win32
+		{17F2560D-ADF9-46D4-9FE6-D2B058F5FB05}.Release|Win32.Build.0 = Release|Win32
+		{17F2560D-ADF9-46D4-9FE6-D2B058F5FB05}.ReleaseMtDll|Win32.ActiveCfg = ReleaseMtDll|Win32
+		{17F2560D-ADF9-46D4-9FE6-D2B058F5FB05}.ReleaseMtDll|Win32.Build.0 = ReleaseMtDll|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

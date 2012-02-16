@@ -1,0 +1,398 @@
+> #
+> # Hammerhead C++ Unit Test Framework -- unit test
+> #
+> 
+> #
+> # test empty string
+> # following line has four spaces and should be ignored
+>     
+> 
+> #
+> # test built-in system command
+> #
+> system "dir /b *.cpp"
+utHhUnitTestFramework.cpp
+> system echo
+ECHO is on.
+> 
+> #
+> # test built-in CreateProcess command
+> #
+> createProcess "cmd.exe /c dir /b *.cpp"
+utHhUnitTestFramework.cpp
+> createProcess "not_found.exe"
+::CreateProcess() failed, error (2) The system cannot find the file specified.
+
+> 
+> #
+> # test built-in sleep command
+> #
+> sleep 1000
+> 
+> #
+> # test C++ bool data type
+> #
+> GetBool
+true
+> 
+> SetBool false
+> GetBool
+false
+> 
+> SetBool true
+> GetBool
+true
+> 
+> #
+> # test built-in VariableData commands
+> #
+> GetVariableData
+false
+> 
+> SetVariableData true
+> GetVariableData
+true
+> 
+> SetVariableData false
+> GetVariableData
+false
+> 
+> #
+> # test derived GetStringValue command - should return "defaultStringValue"
+> #
+> GetStringValue
+defaultStringValue
+> 
+> #
+> # test missing test command parameter - should give the "Missing parameter"
+> #
+> SetStringValue
+Missing parameter: std::string stringValue
+
+> 
+> #
+> # test derived GetDummy command again - should return "defaultStringValue"
+> #
+> GetStringValue
+defaultStringValue
+> 
+> #
+> # test derived SetDummy command
+> #
+> SetStringValue foobar
+> 
+> #
+> # test derived GetDummy command again - should return "foobar"
+> #
+> GetStringValue
+foobar
+> 
+> #
+> # test multiple paramaters
+> #
+> TestMultipleParams "Here is a string with multiple tokens" HereIsAStringWithOneToken true 69 99.99
+multiTokenString = "Here is a string with multiple tokens"
+string = "HereIsAStringWithOneToken"
+boolValue = true
+intNumber = 69
+doubleNumber = 99.99
+> 
+> #
+> # test ?
+> #
+> ?
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+Hammerhead C++ Unit Test Framework Built-in Commands
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+System "command line" - shells out and executes "command line" synchronously using ::system().
+
+CreateProcess "executable" - shells out and executes "executable" synchronously using ::CreateProcess().
+
+Sleep milliseconds - sleeps for some number of milliseconds.
+
+SetVariableData - enables or disables variable data output with "true" or "false".
+
+GetVariableData - gets the current value of variable data output.
+
+Exit - exits the unit test.
+
+unlink "file name" - deletes the file "file name".
+
+mkdir "directory name" - creates the directory "directory name".
+
+rmdir "directory name" - removes the directory "directory name".
+
+? - displays help for these built-in commands and also any documented derived commands.
+
+?? - displays help for only documented derived commands.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+            Documented Derived Commands
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+SetBool <bool> - saves away a bool in a member variable.
+
+GetBool - displays the bool member variable.
+
+SetStringValue <string> - saves away stringValue as a member variable.
+
+GetStringValue - displays the _stringValue member variable.
+
+TestMultipleParams "<multiple token string>" <string> <intNumber> <doubleNumber> - tests use of multiple test arguments.
+
+> 
+> #
+> # test ??
+> #
+> ??
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+            Documented Derived Commands
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+SetBool <bool> - saves away a bool in a member variable.
+
+GetBool - displays the bool member variable.
+
+SetStringValue <string> - saves away stringValue as a member variable.
+
+GetStringValue - displays the _stringValue member variable.
+
+TestMultipleParams "<multiple token string>" <string> <intNumber> <doubleNumber> - tests use of multiple test arguments.
+
+> 
+> #
+> # test multi-token string parsing errors
+> #
+> system "dir *.cpp
+Can't find closing quote in multi-token string.
+
+> system "dir *.cpp\x
+Can't escape 'x' in multi-token string.
+
+> system
+Missing parameter: HH_MultiTokenString commandLine
+
+> 
+> 
+> #
+> # test multi-token string more
+> #
+> Test2MultiTokenStrings "hello" "bye bye"
+multiTokenString1 = "hello"
+multiTokenString2 = "bye bye"
+> Test2MultiTokenStrings hello "bye bye"
+multiTokenString1 = "hello"
+multiTokenString2 = "bye bye"
+> Test2MultiTokenStrings hello bye bye
+multiTokenString1 = "hello"
+multiTokenString2 = "bye"
+> Test2MultiTokenStrings "hello" "bye bye"
+multiTokenString1 = "hello"
+multiTokenString2 = "bye bye"
+> 
+> Test2MultiTokenStrings "\"hello\"" "bye bye"
+multiTokenString1 = "\"hello\""
+multiTokenString2 = "bye bye"
+> 
+> Test2MultiTokenStrings \"
+Can't find closing quote in multi-token string.
+
+> Test2MultiTokenStrings "hello""bye bye"
+multiTokenString1 = "hello"
+multiTokenString2 = "bye bye"
+> 
+> Test2MultiTokenStrings
+Missing parameter: HH_MultiTokenString multiTokenString1
+
+> Test2MultiTokenStrings "hello"
+Missing parameter: HH_MultiTokenString multiTokenString2
+
+> Test2MultiTokenStrings "" ""
+multiTokenString1 = ""
+multiTokenString2 = ""
+> Test2MultiTokenStrings """"
+multiTokenString1 = ""
+multiTokenString2 = ""
+> Test2MultiTokenStrings "\\" "\""
+multiTokenString1 = "\\"
+multiTokenString2 = "\""
+> 
+> 
+> #
+> # include file at first recursion level
+> #
+> # @include "include1.in"
+> #
+> # Hammerhead C++ Unit Test Framework -- unit test (inlcude 1)
+> #
+> 
+> #
+> # test C++ bool data type
+> #
+> GetBool
+true
+> 
+> SetBool false
+> GetBool
+false
+> 
+> SetBool true
+> GetBool
+true
+> 
+> 
+> #
+> # include file at second recursion level
+> #
+> # @include "include2.in"
+> #
+> # Hammerhead C++ Unit Test Framework -- unit test (inlcude 2)
+> #
+> 
+> #
+> # test C++ bool data type
+> #
+> GetBool
+true
+> 
+> SetBool false
+> GetBool
+false
+> 
+> SetBool true
+> GetBool
+true
+> 
+> 
+> #
+> # include file at third recursion level
+> #
+> # @include "include3.in"
+> #
+> # Hammerhead C++ Unit Test Framework -- unit test (inlcude 3)
+> #
+> 
+> #
+> # test C++ bool data type
+> #
+> GetBool
+true
+> 
+> SetBool false
+> GetBool
+false
+> 
+> SetBool true
+> GetBool
+true
+> 
+> 
+> #
+> # include file (with spaces in the name ) at fourth recursion level.
+> # also throw in some spaces after the include command and before the file name begins
+> #
+> # @include "include 4.in"
+> #
+> # Hammerhead C++ Unit Test Framework -- unit test (inlcude 4)
+> #
+> 
+> #
+> # test C++ bool data type
+> #
+> GetBool
+true
+> 
+> SetBool false
+> GetBool
+false
+> 
+> SetBool true
+> GetBool
+true
+> 
+> 
+> #
+> # test C++ bool data type again after returning from include4.in (include3)
+> #
+> GetBool
+true
+> 
+> 
+> #
+> # test C++ bool data type again after returning from include3.in (include2)
+> #
+> GetBool
+true
+> 
+> 
+> #
+> # test C++ bool data type again after returning from include2.in (include1)
+> #
+> GetBool
+true
+> 
+> 
+> #
+> # include file at first recursion level (second test to make sure we can include some of the same files again)
+> #
+> # @include "include5.in"
+> #
+> # Hammerhead C++ Unit Test Framework -- unit test (inlcude 5)
+> #
+> 
+> #
+> # test C++ bool data type
+> #
+> GetBool
+true
+> 
+> SetBool true
+> GetBool
+true
+> 
+> SetBool false
+> GetBool
+false
+> # @include "include5.in"
+> #
+> # Hammerhead C++ Unit Test Framework -- unit test (inlcude 5)
+> #
+> 
+> #
+> # test C++ bool data type
+> #
+> GetBool
+false
+> 
+> SetBool true
+> GetBool
+true
+> 
+> SetBool false
+> GetBool
+false
+> # @include "include5.in"
+> #
+> # Hammerhead C++ Unit Test Framework -- unit test (inlcude 5)
+> #
+> 
+> #
+> # test C++ bool data type
+> #
+> GetBool
+false
+> 
+> SetBool true
+> GetBool
+true
+> 
+> SetBool false
+> GetBool
+false
+> 
+> 
+> #
+> # test exit command
+> #
+> exit
