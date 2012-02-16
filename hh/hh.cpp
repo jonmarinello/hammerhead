@@ -208,7 +208,7 @@ void DisplayCopyrightNotice()
 {
     std::cout << "Hammerhead C++ Unit Testing Framework" << std::endl;
     std::cout << "Release " << HH_VERSION_AS_STRING << " built on " << __DATE__ << std::endl;
-    std::cout << "Copyright (c) 2003-2005, Jon Marinello" << std::endl;
+    std::cout << "Copyright (c) 2003-2012, Jon Marinello" << std::endl;
     std::cout << std::endl;
 }
 

@@ -6,7 +6,7 @@
  *
  */
 
-#define HH_VERSION_AS_STRING "1.03.4.0"
+#define HH_VERSION_AS_STRING "1.03.5.0"
 
 #define HH_VERSION_MAJOR_VERSION               1
 #define HH_VERSION_MINOR_VERSION               3
