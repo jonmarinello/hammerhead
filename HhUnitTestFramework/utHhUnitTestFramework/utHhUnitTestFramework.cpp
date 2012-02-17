@@ -10,7 +10,8 @@ class UtHhUnitTest : public HH_UnitTest
 public:
     UtHhUnitTest( bool& variableDataGeneration, bool interactive )
         : HH_UnitTest( variableDataGeneration, interactive ),
-          m_stringValue( "defaultStringValue" )
+          m_stringValue( "defaultStringValue" ),
+		  m_boolValue( true )
     {}
 
 protected:
