@@ -1,48 +1,55 @@
-Microsoft Visual Studio Solution File, Format Version 8.00
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MediaPlayer", "MediaPlayer.vcproj", "{C7299437-C98E-4E0A-815C-7EBE57183426}"
-	ProjectSection(ProjectDependencies) = postProject
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MediaPlayer", "MediaPlayer.vcxproj", "{C7299437-C98E-4E0A-815C-7EBE57183426}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "utMediaPlayer", "utMediaPlayer\utMediaPlayer.vcproj", "{15103E3F-540D-4E8C-B183-130CBE92E8E0}"
-	ProjectSection(ProjectDependencies) = postProject
-		{C7299437-C98E-4E0A-815C-7EBE57183426} = {C7299437-C98E-4E0A-815C-7EBE57183426}
-		{8A52783C-B562-4C00-9272-D06DB508F3BC} = {8A52783C-B562-4C00-9272-D06DB508F3BC}
-		{A74F38EB-7D21-4E03-94A7-26791D3A3146} = {A74F38EB-7D21-4E03-94A7-26791D3A3146}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "utMediaPlayer", "utMediaPlayer\utMediaPlayer.vcxproj", "{15103E3F-540D-4E8C-B183-130CBE92E8E0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HhUnitTestFramework", "..\..\HhUnitTestFramework\HhUnitTestFramework.vcproj", "{A74F38EB-7D21-4E03-94A7-26791D3A3146}"
-	ProjectSection(ProjectDependencies) = postProject
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HhUnitTestFramework", "..\..\HhUnitTestFramework\HhUnitTestFramework.vcxproj", "{A74F38EB-7D21-4E03-94A7-26791D3A3146}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SoundCard", "..\SoundCard\SoundCard.vcproj", "{8A52783C-B562-4C00-9272-D06DB508F3BC}"
-	ProjectSection(ProjectDependencies) = postProject
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SoundCard", "..\SoundCard\SoundCard.vcxproj", "{8A52783C-B562-4C00-9272-D06DB508F3BC}"
 EndProject
 Global
-	GlobalSection(SolutionConfiguration) = preSolution
-		Debug = Debug
-		Release = Release
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		DebugMtDll|Win32 = DebugMtDll|Win32
+		Release|Win32 = Release|Win32
+		ReleaseMtDll|Win32 = ReleaseMtDll|Win32
 	EndGlobalSection
-	GlobalSection(ProjectConfiguration) = postSolution
-		{C7299437-C98E-4E0A-815C-7EBE57183426}.Debug.ActiveCfg = Debug|Win32
-		{C7299437-C98E-4E0A-815C-7EBE57183426}.Debug.Build.0 = Debug|Win32
-		{C7299437-C98E-4E0A-815C-7EBE57183426}.Release.ActiveCfg = Release|Win32
-		{C7299437-C98E-4E0A-815C-7EBE57183426}.Release.Build.0 = Release|Win32
-		{15103E3F-540D-4E8C-B183-130CBE92E8E0}.Debug.ActiveCfg = Debug|Win32
-		{15103E3F-540D-4E8C-B183-130CBE92E8E0}.Debug.Build.0 = Debug|Win32
-		{15103E3F-540D-4E8C-B183-130CBE92E8E0}.Release.ActiveCfg = Release|Win32
-		{15103E3F-540D-4E8C-B183-130CBE92E8E0}.Release.Build.0 = Release|Win32
-		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.Debug.ActiveCfg = Debug|Win32
-		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.Debug.Build.0 = Debug|Win32
-		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.Release.ActiveCfg = Release|Win32
-		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.Release.Build.0 = Release|Win32
-		{8A52783C-B562-4C00-9272-D06DB508F3BC}.Debug.ActiveCfg = Debug|Win32
-		{8A52783C-B562-4C00-9272-D06DB508F3BC}.Debug.Build.0 = Debug|Win32
-		{8A52783C-B562-4C00-9272-D06DB508F3BC}.Release.ActiveCfg = Release|Win32
-		{8A52783C-B562-4C00-9272-D06DB508F3BC}.Release.Build.0 = Release|Win32
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7299437-C98E-4E0A-815C-7EBE57183426}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C7299437-C98E-4E0A-815C-7EBE57183426}.Debug|Win32.Build.0 = Debug|Win32
+		{C7299437-C98E-4E0A-815C-7EBE57183426}.DebugMtDll|Win32.ActiveCfg = Debug|Win32
+		{C7299437-C98E-4E0A-815C-7EBE57183426}.DebugMtDll|Win32.Build.0 = Debug|Win32
+		{C7299437-C98E-4E0A-815C-7EBE57183426}.Release|Win32.ActiveCfg = Release|Win32
+		{C7299437-C98E-4E0A-815C-7EBE57183426}.Release|Win32.Build.0 = Release|Win32
+		{C7299437-C98E-4E0A-815C-7EBE57183426}.ReleaseMtDll|Win32.ActiveCfg = Release|Win32
+		{C7299437-C98E-4E0A-815C-7EBE57183426}.ReleaseMtDll|Win32.Build.0 = Release|Win32
+		{15103E3F-540D-4E8C-B183-130CBE92E8E0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{15103E3F-540D-4E8C-B183-130CBE92E8E0}.Debug|Win32.Build.0 = Debug|Win32
+		{15103E3F-540D-4E8C-B183-130CBE92E8E0}.DebugMtDll|Win32.ActiveCfg = Debug|Win32
+		{15103E3F-540D-4E8C-B183-130CBE92E8E0}.DebugMtDll|Win32.Build.0 = Debug|Win32
+		{15103E3F-540D-4E8C-B183-130CBE92E8E0}.Release|Win32.ActiveCfg = Release|Win32
+		{15103E3F-540D-4E8C-B183-130CBE92E8E0}.Release|Win32.Build.0 = Release|Win32
+		{15103E3F-540D-4E8C-B183-130CBE92E8E0}.ReleaseMtDll|Win32.ActiveCfg = Release|Win32
+		{15103E3F-540D-4E8C-B183-130CBE92E8E0}.ReleaseMtDll|Win32.Build.0 = Release|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.Debug|Win32.Build.0 = Debug|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.DebugMtDll|Win32.ActiveCfg = DebugMtDll|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.DebugMtDll|Win32.Build.0 = DebugMtDll|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.Release|Win32.ActiveCfg = Release|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.Release|Win32.Build.0 = Release|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.ReleaseMtDll|Win32.ActiveCfg = ReleaseMtDll|Win32
+		{A74F38EB-7D21-4E03-94A7-26791D3A3146}.ReleaseMtDll|Win32.Build.0 = ReleaseMtDll|Win32
+		{8A52783C-B562-4C00-9272-D06DB508F3BC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8A52783C-B562-4C00-9272-D06DB508F3BC}.Debug|Win32.Build.0 = Debug|Win32
+		{8A52783C-B562-4C00-9272-D06DB508F3BC}.DebugMtDll|Win32.ActiveCfg = Debug|Win32
+		{8A52783C-B562-4C00-9272-D06DB508F3BC}.DebugMtDll|Win32.Build.0 = Debug|Win32
+		{8A52783C-B562-4C00-9272-D06DB508F3BC}.Release|Win32.ActiveCfg = Release|Win32
+		{8A52783C-B562-4C00-9272-D06DB508F3BC}.Release|Win32.Build.0 = Release|Win32
+		{8A52783C-B562-4C00-9272-D06DB508F3BC}.ReleaseMtDll|Win32.ActiveCfg = Release|Win32
+		{8A52783C-B562-4C00-9272-D06DB508F3BC}.ReleaseMtDll|Win32.Build.0 = Release|Win32
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-	EndGlobalSection
-	GlobalSection(ExtensibilityAddIns) = postSolution
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
