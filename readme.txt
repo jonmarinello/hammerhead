@@ -2,7 +2,7 @@
     The Hammerhead C++ Unit Test Framework is available for you to use free of charge.
     However, you may not redistribute it for profit to any person or organization.
 
-    Copyright (c) 2003-2012, Jon Marinello
+    Copyright (c) 2003-2013, Jon Marinello
 
 
 
