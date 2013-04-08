@@ -249,7 +249,7 @@
 
 5.5.3 hh.cfg File
     You will need to create a Hammerhead configuration file that contains instructions on how to run your tests
-    in an automated fashion using the hh.exe program. This file should reside in the unti test folder. The
+    in an automated fashion using the hh.exe program. This file should reside in the unit test folder. The
     implementation of the Hammerhead configuration file should look something like the following:
 
     [Hammerhead]
